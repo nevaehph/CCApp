@@ -1,4 +1,4 @@
-package ntu.cs.kwangbeng.helloworld;
+package ntu.cs.kwangbeng.ccsg;
 
 import org.junit.Test;
 
