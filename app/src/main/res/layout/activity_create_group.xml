@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select a Booking"
+                    android:id="@+id/textView5"
+                    android:layout_weight="0" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/BookingSpinner"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog"
+                    android:transitionGroup="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/groupTitle"
+                    android:layout_weight="0"
+                    android:hint="Group Title"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/groupType"
+                    android:layout_weight="0"
+                    android:hint="Activity Type"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/groupSize"
+                    android:layout_weight="0"
+                    android:hint="Group Size"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/groupDesc"
+                    android:layout_weight="0"
+                    android:hint="Enter your Description here" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|center"
+                android:layout_gravity="top">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create Group"
+                    android:id="@+id/GroupSubmitBtn"
+                    android:layout_weight="0"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="#26d612"
+                    android:textColor="#ffffff"
+                    android:clickable="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

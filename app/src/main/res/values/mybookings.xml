@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="CC">
+        <item>Boon Lay Community Centre</item>
+        <item>Boon Lay Community Centre</item>
+    </array>
+    <array name="type">
+        <item>Badminton Court 1</item>
+        <item>Badminton Court 2</item>
+    </array>
+    <array name="date">
+        <item>12/04/2016</item>
+        <item>19/04/2016</item>
+    </array>
+    <array name="startTime">
+        <item>1330</item>
+        <item>1630</item>
+    </array>
+    <array name="endTime">
+        <item>1630</item>
+        <item>1830</item>
+    </array>
+</resources>

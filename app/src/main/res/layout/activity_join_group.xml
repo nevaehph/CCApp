@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ntu.cs.kwangbeng.ccsg.JoinGroup">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/searchTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="15dp"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/textView6"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchTitle"
+            android:hint="Title"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:singleLine="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchType"
+            android:layout_below="@+id/searchTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Type"
+            android:singleLine="true" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/searchSize"
+            android:layout_below="@+id/searchType"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Size"
+            android:singleLine="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:id="@+id/selectDateBtn"
+            android:onClick="showDatePickerDialog"
+            android:layout_below="@+id/searchType"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Date"
+            android:id="@+id/searchSelectedDate"
+            android:layout_below="@+id/searchType"
+            android:layout_toRightOf="@+id/selectDateBtn"
+            android:layout_toEndOf="@+id/selectDateBtn"
+            android:layout_alignBottom="@+id/selectDateBtn"
+            android:editable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/searchSubmitBtn"
+            android:layout_below="@+id/searchSize"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:background="#26d612"
+            android:textColor="#ffffff"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentBottom="true">
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/searchResultGroup" />
+    </RelativeLayout>
+
+</RelativeLayout>
