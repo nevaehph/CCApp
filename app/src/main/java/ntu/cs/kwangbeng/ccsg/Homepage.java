@@ -62,7 +62,11 @@ public class Homepage extends AppCompatActivity {
         user1.getBookings().add(b3);
         user2.getBookings().add(b4);
 
+<<<<<<< HEAD
         Group g1 = new Group("Title 1", "Badminton", "Come and join in the fun!!", 5, b3, user1);
+=======
+        Group g1 = new Group("Title 1", "Badminton", "Come and join in the fun!! ASDASFASDASFASDASFASDASFASDASFD:D\nFriendly Matches abound!", 5, b3, user1);
+>>>>>>> refs/remotes/origin/master
         Group g2 = new Group("Title 2", "Badminton", "Join us for a game of badminton!! :D", 4, b4, user2);
 
         allGroups.add(g1);
@@ -79,12 +83,32 @@ public class Homepage extends AppCompatActivity {
         //end Presentation Purposes
 
         ImageButton group = (ImageButton)this.findViewById(R.id.GroupBtn);
+<<<<<<< HEAD
         group.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+=======
+        group.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+>>>>>>> refs/remotes/origin/master
                 Intent i = new Intent(Homepage.this, GroupMenu.class);
                 startActivity(i);
             }
         });
+<<<<<<< HEAD
+=======
+
+          ImageButton viewAllCCs = (ImageButton)this.findViewById(R.id.viewCCbtn);
+          viewAllCCs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Homepage.this, ViewAllCCs.class);
+                startActivity(i);
+            }
+        });
+
+
+>>>>>>> refs/remotes/origin/master
     }
 }

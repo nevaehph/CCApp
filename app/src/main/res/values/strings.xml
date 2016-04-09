@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">CC@SG</string>
+    <string name="title_activity_view_all_ccs">View All Community Centres</string>
+
+    <string-array name="CC_names">
+        <item>Aljunied Community Centre</item>
+        <item>Ang Mo Kio Community Centre</item>
+        <item>Bedok Community Centre</item>
+        <item>Bishan Community Centre</item>
+        <item>Cairnhill Community Centre</item>
+        <item>Dover Community Centre</item>
+        <item>Hougang Community Centre</item>
+        <item>"Jalan Besar Community Centre</item>
+        <item>"Marine Parade Community Centre</item>
+        <item>"Nanyang Community Centre</item>
+        <item>Sengkang Community Centre</item>
+    </string-array>
+
+    <string-array name="AljuniedCC">
+        <item>Aljunied Community Centre</item>
+        <item>Aljunied Community Centre</item>
+        <item>Aljunied Community Centre</item>
+    </string-array>
+
+    <string-array name="AMKCC">
+        <item>Aljunied Community Centre</item>
+        <item>Aljunied Community Centre</item>
+        <item>Aljunied Community Centre</item>
+    </string-array>
+
+    <string-array name="BedokCC">
+        <item>Aljunied Community Centre</item>
+        <item>Aljunied Community Centre</item>
+        <item>Aljunied Community Centre</item>
+    </string-array>
+
+    <string-array name="BishanCC">
+        <item>Aljunied Community Centre</item>
+        <item>Aljunied Community Centre</item>
+        <item>Aljunied Community Centre</item>
+    </string-array>
 </resources>
