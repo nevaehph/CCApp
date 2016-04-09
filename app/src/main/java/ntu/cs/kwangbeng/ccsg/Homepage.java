@@ -79,12 +79,23 @@ public class Homepage extends AppCompatActivity {
         //end Presentation Purposes
 
         ImageButton group = (ImageButton)this.findViewById(R.id.GroupBtn);
-        group.setOnClickListener(new View.OnClickListener(){
+        group.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 Intent i = new Intent(Homepage.this, GroupMenu.class);
                 startActivity(i);
             }
         });
+
+          ImageButton viewAllCCs = (ImageButton)this.findViewById(R.id.viewCCbtn);
+          viewAllCCs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Homepage.this, ViewAllCCs.class);
+                startActivity(i);
+            }
+        });
+
+
     }
 }
