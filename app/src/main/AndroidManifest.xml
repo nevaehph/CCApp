@@ -18,15 +18,10 @@
         <activity android:name=".GroupMenu" />
         <activity android:name=".CreateGroup" />
         <activity android:name=".JoinGroup" />
-<<<<<<< HEAD
-        <activity android:name=".ViewGroup"></activity>
-=======
-        <activity android:name=".viewAllCCs" />
         <activity android:name=".ViewGroup" />
         <activity
             android:name=".ViewAllCCs"
             android:label="@string/title_activity_view_all_ccs"></activity>
->>>>>>> refs/remotes/origin/master
     </application>
 
 </manifest>

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="280dp"
-<<<<<<< HEAD
     android:layout_height="wrap_content"
-=======
-    android:layout_height="300dp"
->>>>>>> refs/remotes/origin/master
     android:padding="10dp"
     android:paddingLeft="15dp"
     android:paddingTop="15dp">
@@ -64,13 +60,9 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_gravity="bottom|right"
         android:layout_alignParentBottom="true"
         android:layout_weight="1" >
-=======
-        android:layout_gravity="bottom|right">
->>>>>>> refs/remotes/origin/master
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,7 +70,6 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/joinSize"
-<<<<<<< HEAD
             android:layout_marginTop="20dp"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom|right" />
@@ -90,17 +81,7 @@
                 android:id="@+id/joinBtn"
             android:layout_alignParentBottom="true"
                 android:layout_gravity="bottom|right" />
-=======
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Join Group"
-            android:id="@+id/joinBtn"
-            android:layout_gravity="right" />
->>>>>>> refs/remotes/origin/master
     </LinearLayout>
 
 </LinearLayout>

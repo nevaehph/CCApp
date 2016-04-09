@@ -1,6 +1,5 @@
 package ntu.cs.kwangbeng.ccsg;
 
-<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -19,10 +18,8 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-=======
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
->>>>>>> refs/remotes/origin/master
 
 public class ViewGroup extends AppCompatActivity {
 
@@ -30,7 +27,6 @@ public class ViewGroup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_group);
-<<<<<<< HEAD
         setTitle("View My Groups");
 
         final ListView viewGroupList = (ListView)findViewById(R.id.viewGroupList);
@@ -159,7 +155,5 @@ public class ViewGroup extends AppCompatActivity {
 
             return rowView;
         }
-=======
->>>>>>> refs/remotes/origin/master
     }
 }
