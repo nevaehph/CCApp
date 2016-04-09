@@ -6,16 +6,28 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.TimePickerDialog;
 import android.content.Context;
+<<<<<<< HEAD
+import android.content.DialogInterface;
+=======
+>>>>>>> refs/remotes/origin/master
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+import android.view.inputmethod.InputMethodManager;
+=======
+>>>>>>> refs/remotes/origin/master
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+<<<<<<< HEAD
+import android.widget.EditText;
+=======
+>>>>>>> refs/remotes/origin/master
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -23,6 +35,10 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+<<<<<<< HEAD
+import java.text.ParseException;
+=======
+>>>>>>> refs/remotes/origin/master
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -36,17 +52,34 @@ public class JoinGroup extends AppCompatActivity {
         setContentView(R.layout.activity_join_group);
         setTitle("Join Group");
 
+<<<<<<< HEAD
+         final ListView searchView = (ListView) findViewById(R.id.searchResultGroup);
+=======
         ListView searchView = (ListView) findViewById(R.id.searchResultGroup);
+>>>>>>> refs/remotes/origin/master
 
         searchView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
+<<<<<<< HEAD
+                final Group group = Homepage.allGroups.get(position);
+=======
                 Group group = Homepage.allGroups.get(position);
+>>>>>>> refs/remotes/origin/master
                 final Dialog dialog = new Dialog(view.getContext());
                 dialog.setContentView(R.layout.joingrouppopup);
                 dialog.setTitle(group.getTitle());
 
+<<<<<<< HEAD
+                TextView type = (TextView) dialog.findViewById(R.id.joinType);
+                TextView location = (TextView) dialog.findViewById(R.id.joinLocation);
+                TextView date = (TextView) dialog.findViewById(R.id.joinDate);
+                TextView leader = (TextView) dialog.findViewById(R.id.joinLeader);
+                TextView desc = (TextView) dialog.findViewById(R.id.joinDesc);
+                TextView size = (TextView) dialog.findViewById(R.id.joinSize);
+                TextView time = (TextView) dialog.findViewById(R.id.joinTime);
+=======
                 TextView type = (TextView)dialog.findViewById(R.id.joinType);
                 TextView location = (TextView)dialog.findViewById(R.id.joinLocation);
                 TextView date = (TextView)dialog.findViewById(R.id.joinDate);
@@ -54,6 +87,7 @@ public class JoinGroup extends AppCompatActivity {
                 TextView desc = (TextView)dialog.findViewById(R.id.joinDesc);
                 TextView size = (TextView)dialog.findViewById(R.id.joinSize);
                 TextView time = (TextView)dialog.findViewById(R.id.joinTime);
+>>>>>>> refs/remotes/origin/master
 
                 SimpleDateFormat d = new SimpleDateFormat("yyyy-MM-dd");
                 SimpleDateFormat t = new SimpleDateFormat("HH:mm");
@@ -74,12 +108,111 @@ public class JoinGroup extends AppCompatActivity {
 
                 size.setText("Group Size: " + currentSize + "/" + group.getSize());
 
+<<<<<<< HEAD
+                Button joinGroupBtn = (Button) dialog.findViewById(R.id.joinBtn);
+
+                joinGroupBtn.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        group.getMembers().add(Homepage.currentUser);
+                        Homepage.currentUser.addGroup(group);
+                        Toast.makeText(JoinGroup.this, "Group Joined successfully", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                });
+
+=======
+>>>>>>> refs/remotes/origin/master
                 dialog.show();
             }
         });
 
+<<<<<<< HEAD
+        final ArrayList <Group> searchResult = new ArrayList<Group>();
+
+        Button searchGroupBtn = (Button)findViewById(R.id.searchSubmitBtn);
+
+        searchGroupBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //clear everything from searchResult 1st
+                searchResult.clear();
+
+                EditText titleUI = (EditText) findViewById(R.id.searchTitle);
+                String title = titleUI.getText().toString();
+                EditText typeUI = (EditText) findViewById(R.id.searchType);
+                String type = typeUI.getText().toString();
+                EditText sizeUI = (EditText) findViewById(R.id.searchSize);
+                String size = sizeUI.getText().toString();
+                TextView dateUI = (TextView) findViewById(R.id.searchSelectedDate);
+                String date = dateUI.getText().toString();
+
+                for (int i = 0; i < Homepage.allGroups.size(); i++) {
+                    Group g = Homepage.allGroups.get(i);
+                    if (g.getTitle().toLowerCase().contains(title.toLowerCase()) && g.getLeader().getName() != Homepage.currentUser.getName()) {
+                        ArrayList<User> members = g.getMembers();
+                        boolean aMember = false;
+                        for (int a = 0;a < members.size();a++){
+                            if (members.get(a).getName() == Homepage.currentUser.getName()){
+                                aMember = true;
+                                break;
+                            }
+                        }
+                        if (aMember != true){
+                            searchResult.add(g);
+                        }
+                    }
+                }
+
+                int currentSize = searchResult.size();
+                int toBeChecked = 0;
+
+                //perform removal of items here
+                for(int b = 0; b < currentSize;b++){
+                    Group g = searchResult.get(toBeChecked);
+
+                    if (type.compareTo("") != 0) {
+                        //remove based on type
+                        if (g.getType().toLowerCase().contains(type.toLowerCase()) == false) {
+                            searchResult.remove(toBeChecked);
+                            continue;
+                        }
+                    }
+
+                    if (size.compareTo("") != 0){
+                        //remove based on Size
+                        if(g.getSize() > Integer.parseInt(size)){
+                            searchResult.remove(toBeChecked);
+                            continue;
+                        }
+                    }
+
+                    //remove based on Date
+                    if (date.compareTo("Date") != 0){
+                        SimpleDateFormat d = new SimpleDateFormat("yyyy/MM/dd");
+                        String resultDate = d.format(g.getBooking().getStartDate());
+                        if (resultDate.compareTo(date) != 0){
+                            searchResult.remove(toBeChecked);
+                            continue;
+                        }
+                    }
+                    toBeChecked++;
+                }
+
+                SearchGroupAdapter adapter = new SearchGroupAdapter(JoinGroup.this, R.layout.searchgrouplist, searchResult);
+                searchView.setAdapter(adapter);
+
+                InputMethodManager inputManager = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                        InputMethodManager.HIDE_NOT_ALWAYS);
+            }
+        });
+
+
+=======
         SearchGroupAdapter adapter = new SearchGroupAdapter(this, R.layout.searchgrouplist, Homepage.allGroups);
         searchView.setAdapter(adapter);
+>>>>>>> refs/remotes/origin/master
 
     }
 
@@ -116,6 +249,10 @@ public class JoinGroup extends AppCompatActivity {
 
             size.setText(currentSize + "/" + group.getSize());
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> refs/remotes/origin/master
             return rowView;
         }
     }
@@ -137,9 +274,27 @@ public class JoinGroup extends AppCompatActivity {
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
             TextView date = (TextView) getActivity().findViewById(R.id.searchSelectedDate);
+<<<<<<< HEAD
+            String dateToBeDisplayed;
+            month = month + 1;
+            if(month < 10){
+                dateToBeDisplayed = year+"/"+"0"+month+"/"+day;
+            }
+            else
+            {
+                dateToBeDisplayed = year+"/"+month+"/"+day;
+            }
+            date.setText(dateToBeDisplayed);
+        }
+        public void onCancel(DialogInterface dialog){
+            TextView date = (TextView) getActivity().findViewById(R.id.searchSelectedDate);
+            date.setText("Date");
+        }
+=======
             String dateToBeDisplayed = year+"/"+month+"/"+day;
             date.setText(dateToBeDisplayed);
         }
+>>>>>>> refs/remotes/origin/master
     }
     public void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment();

@@ -45,6 +45,10 @@ public class User {
         groups.add(g);
     }
 
+    public void removeGroup(Group g){
+        groups.remove(g);
+    }
+
     public ArrayList<Booking> getBookings(){
         return bookings;
     }

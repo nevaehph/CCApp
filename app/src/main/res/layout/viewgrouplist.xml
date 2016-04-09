@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/viewGroupTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/viewGroupType"
+        android:layout_below="@+id/viewGroupTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/viewGroupLocation"
+        android:layout_below="@+id/viewGroupType"
+        android:layout_alignLeft="@+id/viewGroupType"
+        android:layout_alignStart="@+id/viewGroupType"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/viewGroupDate"
+        android:layout_below="@+id/viewGroupLocation"
+        android:layout_alignLeft="@+id/viewGroupLocation"
+        android:layout_alignStart="@+id/viewGroupLocation" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/viewGroupLeader"
+        android:layout_alignTop="@+id/viewGroupTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/viewGroupSize"
+        android:layout_alignBottom="@+id/viewGroupDate"
+        android:layout_alignRight="@+id/viewGroupLeader"
+        android:layout_alignEnd="@+id/viewGroupLeader" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/viewGroupIsLeader"
+        android:background="@drawable/leader"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/viewGroupLeader"
+        android:layout_toStartOf="@+id/viewGroupLeader"
+        android:layout_marginRight="5dp" />
+</RelativeLayout>

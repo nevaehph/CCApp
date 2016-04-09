@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="280dp"
-<<<<<<< HEAD
     android:layout_height="wrap_content"
-=======
-    android:layout_height="300dp"
->>>>>>> refs/remotes/origin/master
     android:padding="10dp"
     android:paddingLeft="15dp"
     android:paddingTop="15dp">
@@ -15,35 +11,35 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
-        android:id="@+id/joinType" />
+        android:id="@+id/viewMyType" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
-        android:id="@+id/joinLocation" />
+        android:id="@+id/viewMyLocation" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
-        android:id="@+id/joinDate" />
+        android:id="@+id/viewMyDate" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
-        android:id="@+id/joinTime" />
+        android:id="@+id/viewMyTime" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
-        android:id="@+id/joinLeader" />
+        android:id="@+id/viewMyLeader" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,49 +54,50 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
-        android:id="@+id/joinDesc" />
+        android:id="@+id/viewMyDesc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Members:"
+        android:id="@+id/textView8" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/viewMyMembers" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_gravity="bottom|right"
         android:layout_alignParentBottom="true"
         android:layout_weight="1" >
-=======
-        android:layout_gravity="bottom|right">
->>>>>>> refs/remotes/origin/master
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/joinSize"
-<<<<<<< HEAD
+            android:id="@+id/viewMySize"
             android:layout_marginTop="20dp"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom|right" />
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Join Group"
-                android:id="@+id/joinBtn"
+                android:text="Leave Group"
+                android:id="@+id/leaveBtn"
             android:layout_alignParentBottom="true"
                 android:layout_gravity="bottom|right" />
-=======
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Join Group"
-            android:id="@+id/joinBtn"
-            android:layout_gravity="right" />
->>>>>>> refs/remotes/origin/master
     </LinearLayout>
 
 </LinearLayout>
