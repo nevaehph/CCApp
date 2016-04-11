@@ -1,10 +1,9 @@
 package ntu.cs.kwangbeng.ccsg;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.text.ParseException;
@@ -92,6 +91,15 @@ public class Homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Homepage.this, ViewAllCCs.class);
+                startActivity(i);
+            }
+        });
+
+        ImageButton planner = (ImageButton)this.findViewById(R.id.imageButton2);
+        planner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Homepage.this, BaseActivity.class);
                 startActivity(i);
             }
         });
